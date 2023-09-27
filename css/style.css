@@ -59,7 +59,7 @@ License: copyright commercial
   --background-linear-blue: linear-gradient(97.3deg, #57CBF5 -101.13%, #51B2E3 -43.16%, #427FBE 84.49%, #2E3890 271.38%, #2E368F 275.97%);
 
   --theme-color-light: #ffffff;
-  --theme-color-dark: #000000;
+  --theme-color-dark: #202942;
   --theme-color1: #2F55D4;
   --theme-color2: #ffda9a;
   --bg-theme-color1: var(--theme-color1);
@@ -9138,7 +9138,7 @@ Section Title
 }
 .footer-style-one .widgets-section {
   position: relative;
-  padding: 120px 0 60px;
+  /* padding: 120px 0 60px; */
 }
 @media (max-width: 991.98px) {
   .footer-style-one .widgets-section {
