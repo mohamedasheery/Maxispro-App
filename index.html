@@ -23,7 +23,7 @@
   <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
-<body>
+<body onload="   getData();">
   <div class="page-wrapper">
     <!-- Preloader -->
     <div class="preloader"></div>
@@ -301,7 +301,8 @@
   <!-- solution Section -->
   <section class="solution-section container">
     <h2 class="text-center">Solutions</h2>
-    <p class="text-center w-75 m-auto">With over 20 years of experience in designing , developing and implemenCng successful soluCons worldwide, we will
+    <p class="text-center w-75 m-auto">With over 20 years of experience in designing , developing and implemenCng
+      successful soluCons worldwide, we will
       uClize all of our resources to deliver the smart soluCon your company needs and it will be an honor for us to add
       one more success story in our achievements book.
     </p>
@@ -309,24 +310,24 @@
 
     <div class="cards row">
       <div class="solutions-card col-lg-3 col-md-4 col-sm-6" ">
-        <div class="solutions-inner-card" >
-          <img src="assets/img/solutions/solution-card-icon.png" alt="img" class="solution-card-icon" />
-          <h4 class="solutions-card-title text-center">MediMax®</h4>
-          <p class="section-desc text-center">Medical Solutions MediMax®</p>
-  
-          <div class="layer" href="solutions.html">
-            <h3 class="layer-title">MediMax®</h3>
-            <div class="d-flex flex-column align-items-start justify-content-start h-100">
-               <p">Patient Engagement</p>
-               <p">Practice Management</p>
-               <p">Telemedicine</p>
-               
-        
-    
-            </div>
+        <div class=" solutions-inner-card">
+        <img src="assets/img/solutions/solution-card-icon.png" alt="img" class="solution-card-icon" />
+        <h4 class="solutions-card-title text-center">MediMax®</h4>
+        <p class="section-desc text-center">Medical Solutions MediMax®</p>
+
+        <div class="layer" href="solutions.html">
+          <h3 class="layer-title">MediMax®</h3>
+          <div class="d-flex flex-column align-items-start justify-content-start h-100">
+            <p">Patient Engagement</p>
+              <p">Practice Management</p>
+                <p">Telemedicine</p>
+
+
+
           </div>
         </div>
       </div>
+    </div>
     </div>
 
 
@@ -1437,6 +1438,46 @@
   <script src="js/owl.js"></script>
   <script src="js/swipper.min.js"></script>
   <script src="js/script.js"></script>
+
+
+
+  <script>
+
+
+let moviesData = [];
+async function getData(typeMovie="now_playing" ) {
+  if (typeMovie != "" && typeMovie != undefined && typeMovie != null) {
+    let response = await fetch(
+      `assets/data/solutions/solutions.json`
+    );
+    let data = await response.json();
+   solutionData = data.results;
+    
+    displayMovies();
+  } else {
+    alert("wdnkd");
+  }
+}
+function displayMovies() {
+  let temp = "";
+  for (let i = 0; i < moviesData.length; i++) {
+    
+    temp += `   <div class="col-md-4 col-sm-6">
+        <div id="itmes" class="item text-center position-relative " >
+          <img src="https://image.tmdb.org/t/p/w500${moviesData[i].poster_path}"class="img-fluid rounded alt="not found">
+          <div class="contant ">
+              <h2>${moviesData[i].title}</h2>
+              <p>${moviesData[i].overview}</p>
+              <p>rote:${moviesData[i].vote_average}</p>
+              <p>${moviesData[i].release_date}</p>
+
+          </div>
+        </div>
+      </div> `;
+  }
+  document.getElementById("solutionSection").innerHTML = temp;
+}
+  </script>
 </body>
 
 </html>

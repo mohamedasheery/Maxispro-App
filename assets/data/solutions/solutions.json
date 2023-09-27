@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "title": "MediMax®",
+    "sup_title": "Medical Solutions MediMax®",
+    "desc": "MediMax®, our state of art medical solution is specifically designed to address the needs of your healthcare center, medical professionals, and hospitals. We have developed this solution to streamline various processes, improve patient care, enhance operational efficiency, and enable better decision-making within the healthcare industry with wide range of functionalities",
+    "features": [
+      "Electronic Health Records",
+      "Practice Management",
+      "Telemedicine",
+      "Medical Billing and Coding",
+      "Healthcare Analytics",
+      "Radiology and Imaging",
+      "Clinical Decision Support",
+      " Patient Engagement",
+      " Medical Inventory Management",
+      "Laboratory Information Management"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "LMSMax",
+    "sup_title": "Learning Management Solutions",
+    "desc": "Revolutionize the way you deliver education and training with our state-of-the-art Learning Management System LMSMax®, we offer a comprehensive and user-friendly LMS that empowers organizations to create, manage, and deliver engaging learning experiences. Our platform is designed to streamline the entire learning process, from course creation to learner assessment. With a focus on flexibility and scalability, our LMSMax® accommodates diverse learning needs, whether it’s employee training, professional development",
+    "features": [
+      "Course Creation and Management",
+      "User Management",
+      "Content Delivery",
+      "Assessments and Quizzes",
+      "Communication Tools",
+      "Progress Tracking",
+      "Certification and Badges",
+      "Collaboration and Group Work",
+      "Customization and Branding",
+      "Reporting and Analytics",
+      "E-Payment"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "PMax",
+    "sup_title": "Accounting and POS Solutions",
+    "desc": "Introducing our cutting-edge Point of Sale (POS) system PMAX® designed to revolutionize your business and elevate your sales to new heights! Discover the core features that will supercharge your operations and delight your customers",
+    "features": [
+      "Lightning-Fast Checkout",
+      "Effortless Inventory Management",
+      "Customer Relationship Management",
+      "Powerful Reporting and Analytics",
+      "User-Friendly Interface",
+      "Secure and Reliable",
+      "Seamless Integration "
+    ]
+  },
+  {
+    "id": 4,
+    "title": "CallMAX",
+    "sup_title": "Call Center Solutions",
+    "desc": "CallMAX®, the ultimate solution to transform your call center into a super smart platform with its unique features",
+    "features": [
+      "Intelligent Call Routing",
+      "Real-Time Analytics",
+      "Call Recording and Monitoring",
+      "Scalability for Business Growth",
+      "CRM Integration for Personalized Service",
+      "Interactive Voice Response (IVR) Wizardry",
+      "Multi-Channel Support",
+      "Enhanced Security and Compliance"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "ShopyMax",
+    "sup_title": "E-Commerce Solutions",
+    "desc": "ShopyMax®, a Shoppers trip designed to revolutionize your online retail experience! Discover the fundamental functionalities poised to elevate your business to new heights ensuring a consistent stream of returning customers",
+    "features": [
+      "Stunning Product Showcase",
+      "Mobile Optimization",
+      "AI based Personalized Recommendations",
+      "Multi-Channel Selling",
+      "Robust Inventory Management",
+      "Secure Payment Gateway",
+      "Advanced Search and Filtering",
+      "Customer Reviews and Ratings",
+      "Data Analytics and Insights"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "MaxTour",
+    "sup_title": "Tourism Solutions",
+    "desc": "MaxTour® , Our tourism platform for GCC tourism is designed cater to travelers interested in exploring the Gulf Cooperation Council (GCC) countries with unique features",
+    "features": [
+      "Travel Planning",
+      "Local Guides and Tours",
+      "Destination Information",
+      "User Reviews and Ratings",
+      "Cultural Insights",
+      "VISA and Documentation Assistance"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "GigaMax",
+    "sup_title": "Big Data and AI Solutions",
+    "desc": "Introducing GigaMax® our groundbreaking Big Data Customized Solution, the key to unlocking the full potential of your data and propelling your business to unparalleled success! Discover the core features that will revolutionize the way you harness information and turn it into a strategic advantage",
+    "features": [
+      "Data Integration Mastery",
+      "Scalability to Infinity and Beyond",
+      "AI-Driven Insights",
+      "Enhanced Security Fortresses",
+      "Customer-Centric Personalization",
+      "Customizable Dashboard Magic",
+      "Advanced Analytics at Your Fingertips",
+      "Real-Time Data Processing",
+      "Streamlined Data Governance"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "KYCMax",
+    "sup_title": "Identity Verification Solutions",
+    "desc": "KYCMax is our masterpiece solution to identify, verify and know your customer via set of processes, procedures, and technologies. KYCMax can be Utilized by banks,  financial institutions, FinTech companies, cryptocurrency exchanges, online  marketplaces, and various other industries that deal with customer onboarding and  financial transactions.",
+    "features": [
+      "Customer Identity Verification:",
+      "Continuous Monitoring",
+      "AML Compliance: KYCMax",
+      "Customer Due Diligence KYCMax",
+      "Enhanced Due Diligence",
+      "Sanctions and PEP Screening",
+      "Automation and Technology Integration",
+      "Data Security and Privacy"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "AKARMax",
+    "sup_title": "Real Estate Solutions",
+    "desc": "A fully customized web based application; Designed based on real estates best practice. AKARMAX® Comprehensively combine all the necessary modules to support all the related business unites in a dynamic and smart way. With AKARMAX® you can easily manage tenants, properties, buildings, villas and 19 more types of units including shops, offices and even lands. ",
+    "features": []
+  },
+  {
+    "id": 10,
+    "title": "GMax",
+    "sup_title": "Sports and Entertainment Solutions",
+    "desc": "Introducing GMax® , our cutting-edge Gym Management System, the ultimate fitness companion that will take your gym to new heights and maximize your members experience! Explore the core features that will streamline your operations, boost efficiency, and elevate your gym to the pinnacle of success",
+    "features": [
+      "Effortless Member Management",
+      "Trainer and Staff Performance Tracking",
+      "Personalized Member Engagement",
+      "Access Control and Security",
+      "Customizable Class Scheduling",
+      "Extensive Reporting and Analytics",
+      "Automated Payment Processing",
+      "Mobile App for On-the-Go Fitness",
+      "Inventory and Equipment Management"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "MaxEvent",
+    "sup_title": "Events Management Solutions",
+    "desc": "MaxEvent®, the game-changer that will transform the way you plan and execut  events! Experience the ultimate event management solution with these core features that guarantee flawless and unforgettable experiences:",
+    "features": [
+      "Streamlined Event Planning",
+      "Real-Time Event Analytics",
+      "Customizable Event Websites",
+      "Mobile App for Enhanced Experience",
+      "Efficient Check-In and Badge Printing",
+      "Online Registration and Ticketing",
+      "Secure Payment Processing",
+      "Attendee Engagement Tools",
+      "Comprehensive Speaker and Session Management"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "MaxLaw",
+    "sup_title": "Legal Affairs Solutions",
+    "desc": "MaxLaw® , An online lawyers offices management system, allow lawyers to electronically register, manage and follow up all cases, clients and online consultations with unique core features",
+    "features": [
+      "All levels case management",
+      "Online Consultation",
+      "Online Meetings",
+      "Calendar management",
+      "Comprehensive Financial Reports",
+      "Artificial Intelligence based search engine",
+      "Job assigning and follow up",
+      "Legal References Library for each country",
+      "Electronic archive",
+      "Clients can use mobile phone to follow up their cases or upload documents",
+      "Comprehensive Statistical Reports",
+      "Email, SMS and WhatsApp notification system"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Projecty",
+    "sup_title": "Project Management and Planning Solutions",
+    "desc": "Make Projecty® your ultimate tool to drive productivity, collaboration, and project success! Discover the core features that will transform the way you manage projects and propel your team to new heights of efficiency and accomplishment",
+    "features": [
+       "Intuitive Project Planning",
+       "Resource Allocation and Tracking",
+       "Customizable Workflows",
+       "Gantt Chart Visualization",
+       "Real-Time Collaboration",
+       "Budget and Expense Management",
+       "Task and Time Management",
+       "Powerful Reporting and Analytics",
+       "Multi-Platform Access",
+       "Risk and Issue Tracking"
+    ]
+  }
+
+]
