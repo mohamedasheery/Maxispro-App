@@ -45,9 +45,22 @@ License: copyright commercial
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
 :root {
+   --blue:#2F55D4;
+  --blue2: #202942;
+  --transparent:transparent;
+  --white:#ffffff;
+  --black:#000000;
+  --lightGray:rgb(166, 167, 171);
+  --lightGray2:#E6E6E6;
+  --lightGray3:#dadce0;
+  --lightGray4:#6F6C90;
+  --gray1:#696969;
+  --red:#d1495b;
+  --background-linear-blue: linear-gradient(97.3deg, #57CBF5 -101.13%, #51B2E3 -43.16%, #427FBE 84.49%, #2E3890 271.38%, #2E368F 275.97%);
+
   --theme-color-light: #ffffff;
   --theme-color-dark: #000000;
-  --theme-color1: #f1a82a;
+  --theme-color1: #2F55D4;
   --theme-color2: #ffda9a;
   --bg-theme-color1: var(--theme-color1);
   --bg-theme-color2: var(--theme-color2);
@@ -13066,4 +13079,114 @@ Sidebar
 .team-contact-form textarea {
   background-color: #fff;
   height: 180px;
+}
+
+
+/* ///////////////////// */
+
+
+.carousel {
+  .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 0 10px;
+  }
+
+  .carousel-inner {
+    .carousel-item {
+      .carousel-caption {
+
+        left: 10%;
+        top: 30%;
+        text-align: start;
+
+        .carousel-caption-sup-title {
+          font-weight: 900;
+          font-size: 2rem;
+          line-height: 24px;
+          color: var(--lightGray);
+        }
+
+        .carousel-caption-title {
+          font-size: 3.5rem;
+          color: var(--white);
+          line-height: 6rem;
+          font-weight: 600;
+        }
+        .carousel-caption-sup-desc{
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 28px;
+          color: var(--white);
+        }
+        .carousel-caption-sup-btn{
+          background-color: var(--white);
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          border-radius: 5px;
+          padding: .7rem 1.3rem;
+          border: none;
+          font-weight: 600;
+
+
+
+        }
+      }
+    }
+  }
+}
+
+/* solutions */
+.cards {
+  .solutions-card {
+    padding: 2rem;
+
+    .solutions-inner-card {
+      position: relative;
+      overflow: hidden;
+      padding: 2rem 1rem;
+      background-color: #F8F9FA;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      height: 220px;
+      cursor: pointer;
+
+      .solution-card-icon {
+        margin: 1.5rem
+      }
+
+      .solutions-card-title {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+      }
+
+      .layer {
+        background: var(--background-linear-blue);
+        color: var(--white);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: top 1s;
+        z-index: 1000;
+        border-radius: 5px;
+        padding: 2rem;
+        .layer-title{
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+      }
+
+    }
+
+    .solutions-inner-card:hover .layer {
+      top: 0%;
+    }
+  }
 }
