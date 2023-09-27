@@ -13190,3 +13190,107 @@ Sidebar
     }
   }
 }
+
+
+/* services */
+  .services-card {
+    padding: 2rem;
+
+    .inner-card {
+      margin-bottom: 0;
+
+      cursor: pointer;
+      &:hover .services-card-desc{
+        background:var(--background-linear-blue);
+        color: var(--white);
+        transition: .5s;
+      }
+      .services-card-img {
+        margin: auto;
+      }
+
+      .services-card-desc {
+        background-color: var(--white);
+        padding:  1rem;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+
+      }
+    }
+  }
+
+
+  /* download */
+
+  .download {
+
+    margin-top: 2rem;
+    padding: 2rem;
+    background-image: url('../../../../../images/downloads/download.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .download-title {
+      color: var(--white);
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 4rem;
+      text-align: center;
+      margin: 3rem 0 ;
+
+    }
+
+    .download-card {
+      color: var(--white);
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+
+      .inner-card {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+  .icon-ser{
+    background-color: var(--white);
+    color: var(--blue);
+    padding: 20px;
+
+  }
+        .download-card-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 2.8rem;
+          margin: 2rem 0;
+        }
+
+        .download-btn {
+          border-radius: 5px;
+          padding: 10px;
+          color: var(--white);
+          background-color: var(--blue);
+          border: none;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 2.4rem;
+
+
+        }
+      }
+
+    }
+    .next{
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
