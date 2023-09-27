@@ -1,0 +1,171 @@
+/*** 
+
+====================================================================
+    Fun Fact Section
+====================================================================
+
+***/
+
+.fun-fact-section {
+    position: relative;
+    background-color: var(--theme-color-dark);
+    padding: 120px 0 110px;
+}
+
+.counter-block {
+    position: relative;
+    margin-bottom: 30px;
+    .inner {
+        position: relative;
+        padding: 0px 30px 30px;
+        margin: 0 auto;
+        height: 100%;
+        text-align: center;
+        max-width: 250px;
+        color: white;
+        background: linear-gradient(to bottom, #1b1b1b, rgba(0, 0, 0, 0)) 100%;
+        transition: all 300ms ease;
+        &:before{
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            bottom: 4px;
+            left: 4px;
+            background-color: var(--theme-color-dark);
+            content: "";
+        }
+        @include media-breakpoint-down(xl){
+            max-width: 100%;
+        }
+        &:hover {
+            transform: translateY(-15px);
+            .icon {
+                background-color: var(--bg-theme-color1);
+                color: var(--theme-color-light);
+                &::after{opacity: 0;}
+            }
+        }
+    }
+    .icon {
+        position: relative;
+        display: inline-block;
+        height: 113px;
+        width: 113px;
+        @include flex-center;
+        color: var(--theme-color1);
+        background-color: #1b1b1b;
+        font-size: 64px;
+        margin: 0 auto 25px;
+        transition: all 300ms ease;
+        &:before{
+            position: relative;
+            z-index: 2;
+        }
+        &:after{
+            @include overlay;
+            content: "";
+            opacity: .5;
+            background: linear-gradient(135deg, rgb(23, 23, 23) 0%, rgba(23, 23, 23, 0) 1%, rgba(23, 23, 23, 0.6) 70%, rgb(233, 162, 51) 100%);
+            transition: all 300ms ease;
+        }
+    }
+    .count-text {
+        position: relative;
+        display: block;
+        font-size: 52px;
+        line-height: 42px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        @include title-font;
+        color: var(--theme-color-light);
+        transition: all 300ms ease;
+    }
+    .counter-title {
+        color: var(--text-color);
+        @include text-font;
+        margin-bottom: 0;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        transition: all 300ms ease;
+    }
+}
+
+/*** 
+
+====================================================================
+    Fun Fact Section Two
+====================================================================
+
+***/
+
+.fun-fact-section-two {
+    position: relative;
+    background-color: #161617;
+    padding: 220px 0 90px;
+    @include media-breakpoint-down(lg){
+        padding: 120px 0 90px;
+    }
+}
+
+.counter-info-block {
+    .inner {
+        padding-top: 25px;
+        @include media-breakpoint-down(xl){
+            text-align: center;
+        }
+    }
+}
+
+.counter-block-two {
+    position: relative;
+    margin-bottom: 30px;
+    .inner {
+        position: relative;
+        margin: 0 auto;
+        height: 100%;
+        text-align: center;
+        transition: all 300ms ease;
+        color: var(--theme-color-light);
+        @include media-breakpoint-down(xl){
+            max-width: 100%;
+        }
+        &:hover {
+            .icon {
+                background-color: var(--theme-color1);
+                color: var(--theme-color-dark);
+                transform: scaleX(-1);
+            }
+        }
+    }
+    .icon {
+        position: relative;
+        display: inline-block;
+        height: 115px;
+        width: 115px;
+        @include flex-center;
+        color: var(--theme-color1);
+        background-color: #0c0c0d;
+        border-radius: 50%;
+        font-size: 50px;
+        margin: 0 auto 25px;
+        transition: all 300ms ease;
+    }
+    .count-text {
+        position: relative;
+        display: block;
+        font-size: 60px;
+        line-height: 48px;
+        margin-bottom: 17px;
+        @include title-font;
+        color: var(--theme-color-light);
+        transition: all 300ms ease;
+    }
+    .counter-title {
+        color: rgba(255,255,255,.4);
+        @include text-font;
+        font-size: 16px;
+        margin-bottom: 0;
+        letter-spacing: .1em;
+        transition: all 300ms ease;
+    }
+}

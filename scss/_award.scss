@@ -1,0 +1,134 @@
+/***
+
+====================================================================
+    Award Section
+====================================================================
+
+***/
+
+.award-section{
+    position: relative;
+    padding: 120px 0 90px;
+    background-color: var(--theme-color-dark);
+    .bg-award {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .content-column {
+        margin-bottom: 30px;
+        .inner-column {
+            .sec-title {
+                margin-bottom: 30px;
+                @include media-breakpoint-down(lg){
+                    text-align: center;
+                }
+            }
+            .bottom-box {
+                position: relative;
+                display: flex;
+                align-items: center;
+                @include media-breakpoint-down(lg){
+                    justify-content: center;
+                }
+                @include media-breakpoint-down(sm){
+                    flex-direction: column;
+                }
+                .text {
+                    color: var(--theme-color-light);
+                    margin-right: 30px;
+                    max-width: 300px;
+                    letter-spacing: .1em;
+                    @include media-breakpoint-down(sm){
+                        text-align: center;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .right-column {
+        .inner-column {
+           margin-left: 80px;
+           @include media-breakpoint-down(xxl){
+                margin-left: 50px;
+           }
+           @include media-breakpoint-down(xl){
+                margin-left: 0;
+           }
+        }
+    }
+}
+
+.award-block{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        padding: 25px 25px 30px;
+        text-align: center;
+        min-height: 294px;
+        &:hover {
+            &:after {
+                height: 100%;
+            }
+            .date {
+                color: var(--theme-color-light);
+            }
+            .title {
+                color: var(--theme-color-light);
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include overlay;
+            pointer-events: none;
+            background: linear-gradient(135deg, rgb(23, 23, 23) 50%, rgba(23, 23, 23, 0.96) 50%, rgba(237, 166, 42, 0.6) 100%, rgba(241, 168, 42, 0.6) 100%);
+            clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 93%, 0 100%, 0 0);
+            transition: all 300ms ease;
+            opacity: .7;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+            pointer-events: none;
+            background-color: var(--bg-theme-color1);
+            clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 93%, 0 100%, 0 0);
+            transition: all 300ms ease;
+        }
+        .date {
+            position: relative;
+            display: block;
+            color: #aaaaaa;
+            @include title-font;
+            font-size: 16px;
+            line-height: 1.2em;
+            letter-spacing: .1em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            transition: all 300ms ease;
+            z-index: 3;
+        }
+        img {
+            position: relative;
+            z-index: 3;
+        }
+        .title {
+            position: relative;
+            display: block;
+            color: var(--theme-color-light);
+            margin-top: 25px;
+            transition: all 300ms ease;
+            z-index: 3;
+        }
+    }
+}

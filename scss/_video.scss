@@ -1,0 +1,231 @@
+/*** 
+
+====================================================================
+    Video Section
+====================================================================
+
+***/
+
+.video-section{
+    position: relative;
+    margin-bottom: -100px;
+    z-index: 9;
+    @include media-breakpoint-down(lg){
+        margin-bottom: 0;
+    }
+    .icon-lines-4 {
+        position: absolute;
+        top: 0;
+        left: 180px;
+    }
+    .icon-arrow1 {
+        position: absolute;
+        bottom: 200px;
+        right: 145px;
+    }
+    .video-box{
+        position: relative;
+        min-height: 560px;
+        @include media-breakpoint-down(lg){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .icon-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        .icon-shape-2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3;
+            @include media-breakpoint-down(lg){
+                width: 100%;
+                opacity: .5;
+                &:before {
+                    @include overlay;
+                    background-color: var(--theme-color-dark);
+                    content: '';
+                    width: 100%;
+                }
+            }
+        }
+        .bg{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            &::before{
+                @include overlay;
+                background-color: #141417;
+                opacity: .20;
+                content: "";
+            }
+        }
+        .content-box{
+            align-items: flex-end;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding-top: 80px;
+            padding-right: 80px;
+            @include media-breakpoint-down(lg){
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            @include media-breakpoint-down(md){
+                padding: 0 20px;
+            }
+            .play-now{
+                background-color: var(--bg-theme-color1);
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                margin-bottom: 60px;
+                margin-right: 40px;
+                @include media-breakpoint-down(lg){
+                    margin-right: 0;
+                }
+                &:hover{
+                    .icon{
+                        background-color: var(--theme-color-light);
+                        color: var(--theme-color1);
+                    }
+                }
+                &:before {
+                    border: 1px solid #3e3d3d;
+                    border-radius: 50%;
+                    content: '';
+                    height: 142px;
+                    left: 50%;
+                    position: absolute;
+                    top: 50%;
+                    width: 142px;
+                    transform: translate(-50%, -50%);
+                }
+                .icon{
+                    background-color: var(--bg-theme-color1);
+                    color: var(--theme-color-dark);
+                    font-size: 35px;
+                    height: 102px;
+                    line-height: 102px;
+                    width: 102px;
+                    transition: all 300ms ease;
+                }
+            }
+            .title{
+                position: relative;
+                color: var(--theme-color-light);
+                font-size: 36px;
+                line-height: 1.2em;
+                margin-bottom: 0;
+                z-index: 3;
+                @include media-breakpoint-down(lg){
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Video Section Two
+====================================================================
+
+***/
+
+.video-section-two{
+    position: relative;
+    background-color: #18191c;
+    padding: 120px 0 120px;
+    text-align: center;
+    &.pull-down{
+        padding-bottom: 225px;
+        margin-bottom: -120px;
+    }
+    .bg {
+        opacity: .5;
+    }
+    .icon-lines-6 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .play-btn{
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .sec-title{
+        margin-bottom: 0;
+        h2{
+            &:before{display: none;}
+            @include media-breakpoint-down(lg){
+                br{display: none;}
+            }
+            .selected{
+                position: relative;
+                &:before{
+                    position: absolute;
+                    left: -20px;
+                    top: 23px;
+                    height: 71px;
+                    width: 275px;
+                    background-image: url(../images/icons/arrow-circle.png);
+                    z-index: -1;
+                    content: "";
+                    @include media-breakpoint-down(md){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .video-box{
+        position: relative;
+        padding: 170px 30px 180px;
+        text-align: center;
+        z-index: 3;
+        .watch-video-text{
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0;
+            max-width: 100%;
+        }
+
+        .play-btn{
+            position: absolute;
+            right: 165px;
+            bottom: 100px;
+            margin-bottom: 0;
+            @include media-breakpoint-down(xl){
+                position: relative;
+                display: block;
+                right: 0;
+                bottom: 0;
+                margin-top: 50px;
+                text-align: center;
+            }
+            .icon{
+                display: inline-flex;
+                height: 90px;
+                width: 90px;
+                background-color: var(--theme-color-dark);
+                color: var(--theme-color-light);
+                font-size: 20px;
+            }
+        }
+
+    }
+    
+}

@@ -1,0 +1,167 @@
+/*** 
+
+====================================================================
+    Banner Section
+====================================================================
+
+***/
+
+.banner-section {
+    position: relative;
+    overflow: hidden;
+    .slide-item {
+        position: relative;
+        .bg-image {
+            @include overlay;
+            @include background;
+            &:before {
+                @include overlay;
+                @include background;
+                background-image: url(../images/main-slider/shape-2.png);
+                z-index: 2;
+                opacity: .6;
+                content: "";
+                pointer-events: none;
+            }
+            &:after{
+                @include overlay;
+                @include background;
+                background-color: rgb(0, 0, 0, .5);
+                content: "";
+                pointer-events: none;
+            }
+        }
+    }
+    .content-box {
+        position: relative;
+        padding: 300px 0 200px;
+        text-align: center;
+        @include media-breakpoint-down(lg){
+            padding: 270px 0 200px;
+        }
+        .sub-title{
+            position: relative;
+            display: inline-block;
+            padding: 0 16px;
+            @include title-font;
+            line-height: 32px;
+            font-size: 18px;
+            color: var(--theme-color-light);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, .20);
+            margin-bottom: 25px;
+        }
+        .title{
+            font-size: 110px;
+            font-weight: 500;
+            color: var(--theme-color-light);
+            line-height: 90px;
+            margin-bottom: 30px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            @include media-breakpoint-down(lg){
+                font-size: 90px;
+                line-height: 1em;
+            }
+            @include media-breakpoint-down(md){
+                font-size: 70px;
+            }
+            @include media-breakpoint-down(sm){
+                font-size: 50px;
+            }
+        }
+        .btn-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    }
+}
+
+/* Animate 1 */
+.owl-carousel{
+    .animate-7,
+    .animate-6,
+    .animate-5,
+    .animate-4,
+    .animate-3,
+    .animate-2,
+    .animate-1{
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 500ms ease;
+    }
+    .animate-x {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 500ms ease;
+    }
+    
+    .active{
+        .animate-7,
+        .animate-6,
+        .animate-5,
+        .animate-4,
+        .animate-3,
+        .animate-2,
+        .animate-1 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animate-2 {
+            transition-delay: 300ms;
+        }
+        .animate-3 {
+            transition-delay: 600ms;
+        }
+        .animate-4 {
+            transition-delay: 900ms;
+        }
+        .animate-5 {
+            transition-delay: 1200ms;
+        }
+        .animate-6 {
+            transition-delay: 1500ms;
+        }
+        .animate-7 {
+            transition-delay: 1800ms;
+        }
+    }
+}
+
+
+.banner-carousel .owl-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg){
+        display: none;
+    }
+    .owl-next,
+    .owl-prev {
+        display: block;
+        margin: 10px 0;
+        height: 50px;
+        width: 50px;
+        color: var(--theme-color-light);
+        background-color: var(--theme-color-dark);
+        font-size: 16px;
+        line-height: 50px;
+        font-weight: 700;
+        text-align: center;
+        transition: all 500ms ease;
+        &:hover {
+            color: var(--theme-color1);   
+        }
+    }
+}

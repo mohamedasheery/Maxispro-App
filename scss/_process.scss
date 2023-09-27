@@ -1,0 +1,120 @@
+/*** 
+
+====================================================================
+    Pricing Section
+====================================================================
+
+***/
+
+.process-section {
+    position: relative;
+    padding: 120px 0 70px;
+    .icon-lines-3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include media-breakpoint-down(xl){display: none;}
+    }
+}
+
+.process-block {
+    position: relative;
+    margin-bottom: 50px;
+    &:first-child {
+        .inner-box {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .inner-box{
+        position: relative;
+        text-align: center;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 88px;
+            left: -80px;
+            width: 141px;
+            height: 17px;
+            background-image: url(../images/icons/icon-dots.png);
+            background-repeat: no-repeat;
+            @include media-breakpoint-down(xl){display: none;}
+        }
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            .image-box{
+                .count{
+                    background-color: var(--theme-color-dark);
+                    color: var(--theme-color1);
+                }
+            }
+        }
+        .image-box {
+            position: relative;
+            height: 188px;
+            width: 188px;
+            margin: 0 auto 35px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 205px;
+                height: 205px;
+                pointer-events: none;
+                border-radius: 50%;
+                border: 2px solid var(--theme-color1);
+                transform: translate(-50%, -50%);
+                z-index: -2;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 22px;
+                left: -20px;
+                width: 68px;
+                height: 68px;
+                pointer-events: none;
+                border-radius: 50%;
+                background-color: var(--theme-color-dark);
+                z-index: -1;
+            }
+            .image {
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+                img {
+                    border-radius: 50%;
+                    transition: all 300ms ease;
+                }
+            }
+            .count {
+                position: absolute;
+                bottom: 9px;
+                right: -15px;
+                width: 68px;
+                height: 68px;
+                line-height: 75px;
+                border-radius: 50%;
+                font-size: 26px;
+                font-weight: 400;
+                background-color: var(--theme-color1);
+                transition: all 300ms ease;
+                margin-bottom: 0;
+            }
+        }
+        .content-box {
+            .title {
+                font-weight: 400;
+                a:hover {
+                    color: var(--theme-color1);
+                }
+            }
+        }
+    }
+}

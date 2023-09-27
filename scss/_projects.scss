@@ -1,0 +1,177 @@
+/***
+
+====================================================================
+    Projects Section
+====================================================================
+
+***/
+
+.projects-section {
+    position: relative;
+    padding: 120px 0 90px;
+    z-index: 3;
+    .outer-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(sm){
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .btn-box{
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+        }
+    }
+    .carousel-outer {
+        margin-right: -420px;
+        @include media-breakpoint-down(xxl){
+            margin-right: 0;
+        }
+    }
+
+    &.style-two{
+        .icon-lines-4 {
+            position: absolute;
+            top: 0;
+            right: 100px;
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+        }
+        .carousel-outer{
+            margin: 0;
+        }
+        .large-container{
+            max-width: 1600px;
+        }
+        .project-block{
+            .inner-box{
+                .content-box{
+                    padding: 22px 30px;
+                }
+            }
+        }
+    }
+}
+
+.project-block {
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .image {
+                &:before {
+                    height: 80%;
+                }
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            .content-box{
+                opacity: 1;
+                left: 0;
+                visibility: visible;
+                transform: translate(0);
+                .title{
+                    opacity: 1;
+                    transform: translate(0);
+                    transition-delay: 300ms;
+                }
+                .text{
+                    opacity: 1;
+                    transform: translate(0);
+                    transition-delay: 500ms;
+                }
+            }
+        }
+    }
+    .image-box {
+        position: relative;
+        overflow: hidden;
+        transition: all 300ms ease;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0px;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 0;
+                width: 100%;
+                opacity: .6;
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(241,168,42,1) 100%);
+                transition: all 300ms ease;
+                z-index: 1;
+            }
+            a {
+                display: block;
+                width: 100%;
+            }
+            img{
+                transition: all 300ms ease;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .content-box{
+        position: absolute;
+        left: 0;
+        right:70px;
+        bottom: 0;
+        padding: 40px 40px 30px;
+        padding-left: 50px;
+        z-index: 9;
+        min-height: 130px;
+        background-color: var(--theme-color-light);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-20px);
+        transition: all 300ms ease;
+        .icon{
+            position: absolute;
+            top: -40px;
+            right: 0px;
+            display: block;
+            height: 40px;
+            width: 40px;
+            font-size: 16px;
+            color: var(--theme-color-light);
+            background-color: var(--theme-color-dark);
+            @include flex-center;
+            transition: all 300ms ease;
+            &:hover{
+                background-color: var(--bg-theme-color1);
+                color: var(--theme-color-dark);
+            }
+        }
+        .text {
+            position: relative;
+            margin-bottom: 3px;
+            @include title-font;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 300ms ease;
+        }
+        .title{
+            color: var(--theme-color-dark);
+            margin-bottom: 0;
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: all 300ms ease;
+            a:hover{
+                color: var(--theme-color1);
+            }
+        }
+    }
+}

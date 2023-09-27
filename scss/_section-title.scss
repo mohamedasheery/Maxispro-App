@@ -1,0 +1,104 @@
+/*** 
+
+====================================================================
+Section Title
+====================================================================
+
+***/
+
+.sec-title {
+    position: relative;
+    margin-bottom: 50px;
+    @include media-breakpoint-down(md){
+        br{display: none;}
+    }
+    .sub-title {
+        position: relative;
+        display: block;
+        font-size: var(--sec-title-subtitle-font-size);
+        line-height: var(--sec-title-subtitle-line-height);
+        font-weight: var(--sec-title-subtitle-font-weight);
+        font-family: var(--sec-title-subtitle-font-family);
+        color: var(--sec-title-subtitle-color);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    h1{
+        position: relative;
+        font-size: var(--h1-font-size);
+        line-height: 1em;
+        margin-bottom: 0;
+        @include media-breakpoint-down(xl) {
+            font-size: 84px;
+        }
+        @include media-breakpoint-down(lg){
+            font-size: 72px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: 68px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 54px;
+        }
+    }
+    
+    h2 {
+        position: relative;
+        font-size: var(--sec-title-font-size);
+        color: var(--sec-title-color);
+        font-family: var(--sec-title-font-family);
+        font-weight: var(--sec-title-font-weight);
+        margin-bottom: 0;
+        z-index: 2;
+        @include media-breakpoint-down(sm){
+            font-size: 42px;
+            br{display: none;}
+        }
+    }
+    .text {
+        margin-top: 20px;
+    }
+
+    &.light{
+        .sub-title {
+            color: var(--theme-color-light);
+        }
+        .text{
+            color: #999b9f;
+        }
+        h2,
+        h1{
+            color: var(--theme-color-light);
+        }
+    }
+
+    &.dark{
+        .sub-title {
+            color: var(--theme-color-dark);
+        }
+        .text{
+            color: #999b9f;
+        }
+        h2,
+        h1{
+            color: var(--theme-color-dark);
+        }
+    }
+
+    &.text-center{
+        h2{
+            &:before{
+                left: 50%;
+                margin-left: -15px;
+            }
+        }
+    }
+    &.text-gradient {
+        h2{
+            color: var(--theme-color-light);
+            background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 45%,rgba(244,209,153,0.5) 50%,rgba(233,162,51,1) 55%,rgba(233,162,51,1) 100%);;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

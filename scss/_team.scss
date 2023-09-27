@@ -1,0 +1,161 @@
+/***
+
+====================================================================
+    team Section
+====================================================================
+
+***/
+
+.team-section{
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    .icon-lines-2 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .sec-title{
+        .text{
+            margin-top: 20px;
+        }
+    }
+}
+
+// Team Block
+.team-block{
+    position: relative;
+    margin-bottom: 40px;
+    .inner-box {
+        position: relative;
+        &:hover {
+            .image {
+                &:before {
+                    opacity: 0.66;
+                }
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            .social-links {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+            .info-box {
+                &::before {
+                    width: 100%;
+                }
+                &::after {
+                    width: 100%;
+                }
+                .name {
+                    color: var(--theme-color-light);
+                }
+                .designation {
+                    color: var(--theme-color-light);
+                }
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            z-index: 1;
+            &::before{
+                @include overlay;
+                background: linear-gradient(135deg, rgba(23,23,23,1) 0%,rgba(23,23,23,0) 1%,rgba(23,23,23,0.6) 60%,rgba(233,162,51,1) 100%);
+                content: "";
+                pointer-events: none;
+                transition: all 300ms ease;
+                z-index: 2;
+            }
+            img {
+                width: 100%;
+                transition: all 400ms ease;
+            }
+        }
+    }
+
+    .info-box {
+        position: relative;
+        padding: 25px 0;
+        background-color: var(--theme-color-light);
+        margin: 0 auto;
+        text-align: center;
+        transition: all 300ms ease;
+        z-index: 2;
+        &::before {
+            position:absolute;
+            content:'';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 0%;
+            pointer-events: none;
+            background: var(--theme-color-dark);
+            transition:all 300ms ease;
+        }
+        &:after {
+            position:absolute;
+            content:'';
+            top: 0;
+            right: 0;
+            width: 0%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url(../images/icons/bg-lines.png);
+            z-index: 3;
+        }
+        .name {
+            margin-bottom: 5px;
+            a:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .designation {
+            position: relative;
+            display: block;
+            transition: all 400ms ease;
+        }
+    }
+
+    .social-links {
+        position: absolute;
+        right: 30px;
+        bottom: 100%;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        z-index: 3;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 400ms ease;
+        a {
+            position: relative;
+            width: 43px;
+            height: 43px;
+            line-height: 43px;
+            text-align: center;
+            font-size: var(--body-font-size);
+            color: var(--theme-color-dark);
+            background-color: var(--bg-theme-color1);
+            margin-top: 10px;
+            border-radius: 15px;
+            transition: all 300ms ease;
+            &:hover {
+                color: var(--theme-color-light);
+                background-color: var(--theme-color-dark);
+            }
+        }
+    }
+}
