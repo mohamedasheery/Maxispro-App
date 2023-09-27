@@ -19,11 +19,10 @@
   <!-- Responsive -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-  <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+ 
 </head>
 
-<body onload="   getData();">
+<body onload="getData();">
   <div class="page-wrapper">
     <!-- Preloader -->
     <div class="preloader"></div>
@@ -308,25 +307,9 @@
     </p>
 
 
-    <div class="cards row">
-      <div class="solutions-card col-lg-3 col-md-4 col-sm-6" ">
-        <div class=" solutions-inner-card">
-        <img src="assets/img/solutions/solution-card-icon.png" alt="img" class="solution-card-icon" />
-        <h4 class="solutions-card-title text-center">MediMax®</h4>
-        <p class="section-desc text-center">Medical Solutions MediMax®</p>
-
-        <div class="layer" href="solutions.html">
-          <h3 class="layer-title">MediMax®</h3>
-          <div class="d-flex flex-column align-items-start justify-content-start h-100">
-            <p">Patient Engagement</p>
-              <p">Practice Management</p>
-                <p">Telemedicine</p>
-
-
-
-          </div>
-        </div>
-      </div>
+    <div class="cards ">
+      <div id="solutionSection" class="row">
+ 
     </div>
     </div>
 
@@ -1420,37 +1403,67 @@
   <script>
 
 
-let moviesData = [];
-async function getData(typeMovie="now_playing" ) {
-  if (typeMovie != "" && typeMovie != undefined && typeMovie != null) {
+let solutionData = [];
+async function getData( ) {
+
     let response = await fetch(
       `assets/data/solutions/solutions.json`
     );
     let data = await response.json();
-   solutionData = data.results;
+   solutionData = data;
     
-    displayMovies();
-  } else {
-    alert("wdnkd");
-  }
-}
-function displayMovies() {
-  let temp = "";
-  for (let i = 0; i < moviesData.length; i++) {
-    
-    temp += `   <div class="col-md-4 col-sm-6">
-        <div id="itmes" class="item text-center position-relative " >
-          <img src="https://image.tmdb.org/t/p/w500${moviesData[i].poster_path}"class="img-fluid rounded alt="not found">
-          <div class="contant ">
-              <h2>${moviesData[i].title}</h2>
-             
+     let temp = "";
+   for (let i = 0; i <data.length; i++) {
+    console.log(data[i]);
+    temp += `<div class="solutions-card col-lg-3 col-md-4 col-sm-6" >
+      <div class=" solutions-inner-card my-1">
+        <img src="assets/img/solutions/solution-card-icon.png" alt="img" class="solution-card-icon" />
+        <h4 class="solutions-card-title text-center">MediMax®</h4>
+        <p class="section-desc text-center">Medical Solutions MediMax®</p>
 
+        <div class="layer" href="solutions.html">
+          <h3 class="layer-title">MediMax®</h3>
+          <div class="d-flex flex-column align-items-start justify-content-start h-100">
+            <p">Patient Engagement</p>
+              <p">Practice Management</p>
+                <p">Telemedicine</p>
           </div>
         </div>
+      </div>
       </div> `;
   }
   document.getElementById("solutionSection").innerHTML = temp;
 }
+
+
+// function displayMovies() {
+//   debugger
+//   let temp = "";
+
+
+//     solutionData.map((item)=>{
+//      console.log(item);
+//     })
+//     for (let i = 0; i < solutionData.length; i++) {
+//     temp += `  <div solutions-card col-lg-3 col-md-4 col-sm-6">
+//       <div class=" solutions-inner-card">
+//         <img src="assets/img/solutions/solution-card-icon.png" alt="img" class="solution-card-icon" />
+//         <h4 class="solutions-card-title text-center">MediMax®</h4>
+//         <p class="section-desc text-center">Medical Solutions MediMax®</p>
+
+//         <div class="layer" href="solutions.html">
+//           <h3 class="layer-title">MediMax®</h3>
+//           <div class="d-flex flex-column align-items-start justify-content-start h-100">
+//             <p">Patient Engagement</p>
+//               <p">Practice Management</p>
+//                 <p">Telemedicine</p>
+//           </div>
+//         </div>
+//       </div>
+//       </div> `;
+//   }
+//   document.getElementById("solutionSection").innerHTML = temp;
+// }
   </script>
 </body>
 
