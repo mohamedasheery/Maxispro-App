@@ -1,0 +1,2 @@
+1 add extantion at vs code =>Live Server
+2 click on index html and select open with Live Server 
