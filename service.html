@@ -28,7 +28,7 @@
 
     <!-- Main Header-->
    <!-- Main Header-->
-   <header class="main-header header-style-one">
+   <header  class="main-header header-style-one  ">
 
     <div class="header-lower">
       <!-- Main box -->
@@ -42,10 +42,10 @@
           <nav class="nav main-menu">
             <ul class="navigation">
 
-              <li><a href="index.html">Home</a></li>
+              <li><a id="home-nav-item" href="index.html">Home ar</a></li>
 
               <li class="dropdown">
-                <a href="#">About</a>
+                <a id="about-nav-item" href="#">About</a>
                 <ul>
                   <li><a href="about.html">About us</a></li>
                   <li><a href="about.html">onsite Team</a></li>
@@ -54,7 +54,7 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#">solutions</a>
+                <a id="solution-nav-item" >solutions</a>
                 <ul>
                   <li> <a href="solution.html">MediMax®</a></li>
                   <li> <a href="solution.html">LMSMax</a></li>
@@ -73,8 +73,8 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#">Services</a>
-                <ul >
+                <a id="service-nav-item" >Services</a>
+                <ul>
                   <li> <a href="service.html">Customized Applications xxx Development</a></li>
                   <li> <a href="service.html">Mobile Applications Development</a></li>
                   <li> <a href="service.html">Data Integration</a></li>
@@ -87,13 +87,20 @@
                   <li> <a href="service.html">Business Intelligence and Data warehouse development</a></li>
                   <li> <a href="service.html">Business Analysis and Business Processes Re-Engineering</a></li>
                   <li> <a href="service.html">UI/UX Modernization</a></li>
-              
+
 
                 </ul>
               </li>
 
-              <li><a href="index.html">Contact</a></li>
-              <li><a href="index.html">download</a></li>
+              <li><a id="contact-nav-item" href="#contacts">Contact</a></li>
+              <li><a id="download-nav-item"  href="#downloads">download</a></li>
+              <li class="dropdown">
+                <a id="lang-nav-item" >lang</a>
+                <ul>
+                  <li><a  onclick="switchLanguage('ar')">ar</a></li>
+                  <li><a  onclick="switchLanguage('en')">en</a></li>
+                </ul>
+              </li>
             </ul>
           </nav>
         </div>
@@ -282,16 +289,16 @@
 
                 </div>
 
-                <div class="service-details-help">
+                <div class="service-details-help text-light">
                   <div class="help-shape-1"></div>
                   <div class="help-shape-2"></div>
-                  <h2 class="help-title">Contact with <br> us for any <br> advice</h2>
+                  <h2 class="help-title text-light">Contact with <br> us for any <br> advice</h2>
                   <div class="help-icon">
                     <span class=" lnr-icon-phone-handset"></span>
                   </div>
-                  <div class="help-contact">
-                    <p>Need help? Talk to an expert</p>
-                    <a href="tel:+968-22546116">+968-22546116</a>
+                  <div class="help-contact text-light">
+                    <p class="text-light">Need help? Talk to an expert</p>
+                    <a  class="text-light" href="tel:+968-22546116">+968-22546116</a>
                   </div>
                 </div>
 

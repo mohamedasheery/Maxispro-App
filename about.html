@@ -30,14 +30,14 @@
     </style>
 </head>
 
-<body>
+<body onload="getData();" >
     <div class="page-wrapper">
         <!-- Preloader -->
         <div class="preloader"></div>
 
         <!-- Main Header-->
        <!-- Main Header-->
-    <header class="main-header header-style-one">
+       <header  class="main-header header-style-one  ">
 
         <div class="header-lower">
           <!-- Main box -->
@@ -51,10 +51,10 @@
               <nav class="nav main-menu">
                 <ul class="navigation">
   
-                  <li><a href="index.html">Home</a></li>
+                  <li><a id="home-nav-item" href="index.html">Home ar</a></li>
   
                   <li class="dropdown">
-                    <a href="#">About</a>
+                    <a id="about-nav-item" href="#">About</a>
                     <ul>
                       <li><a href="about.html">About us</a></li>
                       <li><a href="about.html">onsite Team</a></li>
@@ -63,7 +63,7 @@
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="#">solutions</a>
+                    <a id="solution-nav-item" >solutions</a>
                     <ul>
                       <li> <a href="solution.html">MediMax®</a></li>
                       <li> <a href="solution.html">LMSMax</a></li>
@@ -82,8 +82,8 @@
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="#">Services</a>
-                    <ul >
+                    <a id="service-nav-item" >Services</a>
+                    <ul>
                       <li> <a href="service.html">Customized Applications xxx Development</a></li>
                       <li> <a href="service.html">Mobile Applications Development</a></li>
                       <li> <a href="service.html">Data Integration</a></li>
@@ -96,13 +96,20 @@
                       <li> <a href="service.html">Business Intelligence and Data warehouse development</a></li>
                       <li> <a href="service.html">Business Analysis and Business Processes Re-Engineering</a></li>
                       <li> <a href="service.html">UI/UX Modernization</a></li>
-                  
+  
   
                     </ul>
                   </li>
   
-                  <li><a href="index.html">Contact</a></li>
-                  <li><a href="index.html">download</a></li>
+                  <li><a id="contact-nav-item" href="#contacts">Contact</a></li>
+                  <li><a id="download-nav-item"  href="#downloads">download</a></li>
+                  <li class="dropdown">
+                    <a id="lang-nav-item" >lang</a>
+                    <ul>
+                      <li><a  onclick="switchLanguage('ar')">ar</a></li>
+                      <li><a  onclick="switchLanguage('en')">en</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -179,6 +186,7 @@
         </div>
         <!-- End Sticky Menu -->
       </header>
+ 
       <!--End Main Header -->
   
       <!--Main Slider-->
@@ -247,7 +255,7 @@
   
         </div>
   
-        <div class="my-5">
+        <div class="my-2">
           <div class="clients">
             <div class="row ">
               <img class="col-6 col-sm-4 col-md-3 col-lg-2 " src="images/clients/clouder.png">
@@ -285,7 +293,7 @@
                         <div class="service-sidebar mw-100">
                             <!--Start Services Details Sidebar Single-->
                             <div class="sidebar-widget service-sidebar-single">
-                                <h3 class="text-center">About us</h3>
+                                <h3 id="about_title" class="text-center">About usddd</h3>
                                 <div class="sidebar-service-list">
                                     <div class="row tabs">
                                         <div class="col-md-4">
@@ -317,15 +325,8 @@
                     <img src="images/about/about-img.png" alt="" />
                     <div class="col-xl-12 col-lg-12">
                         <div class="services-details__content">
-                            <p>
-                                MaxisPro® is a leading IT services provider with over 20 years of experience in the IT
-                                industry across the globe. At MaxisPro®, we place a strong emphasis on the profound
-                                impact of digital transformation on businesses. Embracing this evolution enables
-                                companies to establish stronger customer connections, accelerate innovation, and
-                                consequently, secure a more substantial share of profits within their respective
-                                domains. Our approach focuses on simplicity, avoiding unnecessary complexity. The power
-                                of our skilled business analysts relies on simplifying complex tasks transforming them
-                                into smart business processes that are easy for everyone to use.
+                            <p id="about_desc">
+                           
                             </p>
                             <div id="tab_1" class="tabs__tab active" data-tab-info>
                                 <div class="row">
@@ -336,35 +337,12 @@
                                         <img src="images/about/clints-1.png" alt="" />
                                     </div>
                                 </div>
-                                <h3 class="mt-4">Vision</h3>
-                                <p>Our vision is a symphony of innovation, where technology is not just a tool, but a
-                                    transformative force that shapes the future. Imagine a world where businesses thrive
-                                    seamlessly, empowered by the limitless potential of digital solutions. We see a
-                                    landscape where organizations transcend boundaries, propelled by our unparalleled IT
-                                    expertise. Picture a canvas where intricate networks interlace effortlessly,
-                                    connecting
-                                    people, processes, and possibilities. MaxisPro® stands as the master architect,
-                                    sculpting these connections into a harmonious symphony of efficiency </p>
+                                <h3 id="about_vision_title" class="mt-4 text-center"></h3>
+                                <p id="about_vision_desc" class="w-75 text-center m-auto" > </p>
                                 <div class="content mt-40">
                                     <div class="text">
-                                        <h3>Mission</h3>
-                                        <p>Unwavering focus on our clients is the heart of our mission. We exist to
-                                            understand their unique needs, challenges, and aspirations, and to provide
-                                            them
-                                            with tailor-made IT solutions that not only address their current
-                                            requirements
-                                            but also lay the foundation for their future success. We pledge to be
-                                            pioneers
-                                            in our field, consistently staying at the forefront of technological trends
-                                            and
-                                            advancements. We constantly seek out new ways to harness the power of
-                                            emerging
-                                            technologies, from artificial intelligence and data analytics to cloud
-                                            computing
-                                            and beyond. This commitment to innovation ensures that our clients benefit
-                                            from
-                                            the latest tools and strategies, gaining a competitive edge in their
-                                            industries
+                                        <h3 id="about_mission_title" class="text-center"></h3>
+                                        <p id="about_mission_desc" class="w-75 text-center m-auto">
                                         </p>
                                     </div>
                                 </div>
@@ -488,6 +466,94 @@
     <script src="js/owl.js"></script>
     <script src="js/script.js"></script>
     <script>
+
+
+      let lang;
+    if (localStorage.getItem('selectedLanguage')) {
+      lang = localStorage.getItem('selectedLanguage');
+      switchLanguage(lang);
+    } else {
+      lang = 'en';
+      localStorage.setItem('selectedLanguage', 'en');
+      switchLanguage(lang);
+
+    }
+    function switchLanguage(langCode) {
+      localStorage.setItem('selectedLanguage',langCode);
+      lang = langCode;
+      if(langCode == 'ar') {
+        document.getElementById("home-nav-item").innerHTML = 'الرئسية';
+        document.getElementById("about-nav-item").innerHTML = 'من نحن';
+        document.getElementById("solution-nav-item").innerHTML = 'حلول';
+        document.getElementById("service-nav-item").innerHTML = 'الخدمات';
+        document.getElementById("contact-nav-item").innerHTML = 'التواصل';
+        document.getElementById("download-nav-item").innerHTML = 'تنزيل';
+        document.getElementById("lang-nav-item").innerHTML = 'اللغه';
+
+      
+      } else{
+        document.getElementById("home-nav-item").innerHTML = 'Home';
+        document.getElementById("about-nav-item").innerHTML = 'About us ';
+        document.getElementById("solution-nav-item").innerHTML = 'Solutions';
+        document.getElementById("service-nav-item").innerHTML = 'Services';
+        document.getElementById("contact-nav-item").innerHTML = 'contacts';
+        document.getElementById("download-nav-item").innerHTML = 'downloads';
+        document.getElementById("lang-nav-item").innerHTML = 'Lang';
+        
+      }
+
+      if ($('.mobile-menu').length) {
+
+var mobileMenuContent = $('.main-header .main-menu .navigation').html();
+$('.mobile-menu .navigation').children().remove();
+$('.sticky-header .navigation').children().remove();
+
+$('.mobile-menu .navigation').append(mobileMenuContent);
+$('.sticky-header .navigation').append(mobileMenuContent);
+$('.mobile-menu .close-btn').on('click', function () {
+  $('body').removeClass('mobile-menu-visible');
+});
+
+//Dropdown Button
+$('.mobile-menu li.dropdown .dropdown-btn').on('click', function () {
+  $(this).prev('ul').slideToggle(500);
+  $(this).toggleClass('active');
+});
+
+//Menu Toggle Btn
+$('.mobile-nav-toggler').on('click', function () {
+  $('body').addClass('mobile-menu-visible');
+});
+
+//Menu Toggle Btn
+$('.mobile-menu .menu-backdrop, .mobile-menu .close-btn').on('click', function () {
+  $('body').removeClass('mobile-menu-visible');
+});
+
+}
+        
+   
+  getData();
+  }
+
+ 
+
+
+  async function getData() {
+      let response = await fetch(
+        `assets/data/about/${lang}.json`
+      );
+  
+      let data = await response.json();
+
+      document.getElementById('about_title').innerHTML =data.title
+      document.getElementById('about_desc').innerHTML =data.desc
+      document.getElementById('about_mission_desc').innerHTML =data.about_mission_desc
+      document.getElementById('about_mission_title').innerHTML =data.about_mission_title
+      document.getElementById('about_vision_title').innerHTML =data.about_vision_title
+      document.getElementById('about_vision_desc').innerHTML =data.about_vision_desc
+
+    }
         // function to get each tab details
         const tabs = document.querySelectorAll('[data-tab-value]')
         const tabInfos = document.querySelectorAll('[data-tab-info]')

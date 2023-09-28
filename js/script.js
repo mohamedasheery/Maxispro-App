@@ -40,14 +40,14 @@ const _ = (el) => document.querySelector(el);
 			var scrollLink = $('.scroll-to-top');
 			var sticky_header = $('.main-header .sticky-header');
 			if (windowpos > 100) {
-				sticky_header.addClass("fixed-header animated slideInDown");
+				sticky_header.removeClass("fixed-header animated slideInDown");
 				scrollLink.fadeIn(300);
 			} else {
 				sticky_header.removeClass("fixed-header animated slideInDown");
 				scrollLink.fadeOut(300);
 			}
 			if (windowpos > 1) {
-				siteHeader.addClass("fixed-header");
+				siteHeader.removeClass("fixed-header");
 			} else {
 				siteHeader.removeClass("fixed-header");
 			}

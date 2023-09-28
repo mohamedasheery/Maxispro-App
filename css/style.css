@@ -516,13 +516,13 @@ li {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 80px;
+  width: 180px;
   margin-left: -40px;
   margin-top: -70px;
-  height: 80px;
+  height: 180px;
   border-radius: 20px;
   background-position: center center;
-  background-image: url(../images/icons/preloader.png);
+  background-image: url(../images/favicon2.gif);
   -webkit-animation: loading 7s infinite linear;
           animation: loading 7s infinite linear;
   content: "";
@@ -2665,10 +2665,11 @@ Header Style One
 
 ***/
 .header-style-one {
-  position: relative;
+  position: fixed;
   background-color: #ffffff;
 }
 .header-style-one .header-top {
+
   position: relative;
   background-color: var(--bg-theme-color1);
   margin-left: 260px;
